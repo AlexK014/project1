@@ -7,6 +7,12 @@ function App() {
       <header className="App-header">
         <div className='app'>ПРИЛОЖЕНИЕ REACT</div>
       </header>
+
+      <div>
+        <div>
+          ПРОФИЛЬ
+        </div>
+      </div>
     </div>
   );
 }
