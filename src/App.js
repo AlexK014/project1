@@ -1,19 +1,29 @@
-import logo from './logo.svg';
+
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Dialogs from './Components/Header/Dialogs/Dialogs';
+import Header from './Components/Header/Header';
+import Navbar from './Components/Navbar/Navbar';
+import Profile from './Components/Profile/Profile';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <div className='app'>ПРИЛОЖЕНИЕ REACT</div>
-      </header>
+    <div className="app">
+      <Header />
+      <Navbar />
+      
 
-      <div>
-        <div>
-          ПРОФИЛЬ
-        </div>
+      <div className='content'>
+        <Routes>
+          <Route path={'/profile'} element={<Profile/>}/>
+          <Route path={'/dialogs'} element={<Dialogs />}/>
+
+        </Routes>
+        
       </div>
     </div>
+
+
   );
 }
 
